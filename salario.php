@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 if (isset ($_POST["nome"]) && isset($_POST["salarioAtual"])
  && isset($_POST["genero"]) && isset($_POST["cargo"]))
 {
@@ -30,7 +34,7 @@ $salarioNovo = $salarioAtual > 5000 ? $salarioAtual * 1.1 : $salarioAtual * 1.2;
 <body>
 <main>
 <p>
-<?= $genero === "m" ? "O" : ($genero === "f" ? "A" : "") ?> <?= $nome ?> passará a receber R$
+<?= $genero === "m" ? "O" : ($genero === "f" ? "A" : "") ?>  <?= $nome ?> passará a receber R$
 <?= number_format($salarioNovo, 2, ",", ".") ?>, 
  no cargo de <?= $cargo ?>
 </p>

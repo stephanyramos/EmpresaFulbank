@@ -1,3 +1,31 @@
+<?php
+
+$cargos =[
+    "empregado",
+    "Desenvolvedor",
+    "Analista de Sistemas",
+];
+//Imprimindo uym vetor na tela 
+$cargos[]="DevOps";
+$cargos[]="DBA";
+$cargos[]="QA";
+$cargos[]="Gerente de projetos ";
+$cargos[]="Gerente de produtos";
+$cargos[]="desenvolvedor front-end";
+$cargos[]="telemarketing";
+$cargos[]="ADM";
+
+// //adicionando um elemento no vetor
+// print_r($cargos);
+
+//excluido a posição do vetor
+//uset($cargos[0])
+
+// die;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,16 +70,17 @@
 
         <select name="cargo">
             <option value="emprego" selected>SELECIONE</option>
-            <option value="emprego">empregado</option>
-            <option value="emprego">Desenvolvedor</option>
-            <option value="emprego">Analista de Sistemas</option>
-            <option value="emprego">DBA</option>
-            <option value="emprego">QA</option>
-            <option value="emprego">Gerente de projetos </option>
-            <option value="emprego">Gerente de produtos</option>
-            <option value="emprego">desenvolvedor front-end</option>
-            <option value="emprego">telemarketing</option>
-            <option value="ADM">ADM</option>
+            <?php
+         $tam = count($cargos)
+         $contador = 0;
+         while(&contador < $tam){
+            echo"<option> . $cargos[$contador]</optio>";
+         }
+            
+
+         }
+
+            ?>
         </select>
 
         <button>Fazer Cadastro</button>
